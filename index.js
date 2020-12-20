@@ -22,6 +22,12 @@ const bigBang = function(){
      * @var {object}
      *
      */
+    let g4l4x13s = {};
+    /*
+     * @private
+     * @var {object}
+     *
+     */
     let b4s3 = {};
     /*
      * @private
@@ -80,9 +86,59 @@ const bigBang = function(){
       * @return {function||class||object||mixed}
      */
      const baseGet = function(name){
-         if(typeof base[name] === 'undefined') 
+         if(typeof b3s4[name] === 'undefined') 
              return false;
-         return baseGet(name);
+         return b3s4[name];
+     }
+     /*
+      * @param {string}
+      * @private
+      * @return {boolean}
+     */
+    const galaxyAdd = function(name){
+        if(typeof name === 'undefined')
+                name = 'm1lkyw4y';
+        if(typeof g4l4x13s[name] !== 'undefined')
+            return name;
+        g4l4x13s[name] = {};
+        return name;
+    }
+     /*
+      * @param {string}
+      * @param {any}
+      * @param {void||string}
+      * @private
+      * @return {boolean}
+     */
+    const galaxyTo = function(solar, planets, galaxy){
+        galaxyAdd(galaxy);
+        if(typeof g4l4x13s[galaxy][solar] !== 'undefined')
+            return false;
+        g4l4x13s[galaxy][solar] = planets;
+        return true;
+    }
+     /*
+      * @param {string}
+      * @param {void||string}
+      * @private
+      * @return {any}
+     */
+    const galaxyFrom = function(solar, galaxy){
+        galaxyAdd(galaxy);
+        if(typeof g4l4x13s[galaxy][solar] !== 'undefined')
+            return undefined;
+        return g4l4x13s[galaxy][solar];
+    }
+    /*  !!! NEVER USE IT JUST FOR MIGRATION PURPUS !!!
+      * @param {string}
+      * @private
+      * @return {any}
+     */
+     const galaxyGet = function(galaxy){
+        galaxyAdd(galaxy);
+         if(typeof g4l4x13s[galaxy] === 'undefined') 
+             return undefined;
+         return g4l4x13s[galaxy];
      }
     /*
      * @private
@@ -106,7 +162,7 @@ const bigBang = function(){
                   (typeof global.theUn1v3rse === 'undefined')||
                   (global.theUn1v3rse !== hydr0g3n)
               ){
-                  if(h4pp3n3d === true){
+               if(h4pp3n3d === true){
                         console.error(
                             'Somthing wrong with the universe'
                         );
@@ -123,6 +179,7 @@ const bigBang = function(){
           h4pp3n3d = true;
           l4st = Date.now();
           t1ck3d++;
+          // temporaly code.
           hydr0g3n.stat = {
               'happened' : (h4pp3n3d),
               'valid'    : (v4l1d),
@@ -131,9 +188,13 @@ const bigBang = function(){
 
           };
           hydr0g3n.controls = {
-              'baseAdd'  : baseAdd,
-              'basGet'   : baseGet,
-              'exit'     : endOfTheUniverse
+              'baseAdd'     : baseAdd,
+              'basGet'      : baseGet,
+              'galaxyGet'   : galaxyGet,
+              'galaxyAdd'   : galaxyAdd,
+              'galaxyTo'    : galaxyTo,
+              'galaxyFrom'  : galaxyFrom,
+              'exit'        : endOfTheUniverse
           }
           interval = setTimeout(boo000om, 10000);
     }
