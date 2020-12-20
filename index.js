@@ -24,6 +24,11 @@ const bigBang = function(){
     let t1ck3d = 0;
     /*
      * @private
+     * @var {integer} [Uint32]
+     */
+    let l4st = 0;
+    /*
+     * @private
      * @var {timeout}
      */
     let interval ;
@@ -71,9 +76,14 @@ const bigBang = function(){
                   global.theUn1v3rse = hydr0g3n;
               }
           h4pp3n3d = true;
+          l4st = Date.now();
+          t1ck3d++;
           hydr0g3n.stat = {
               'happened' : (h4pp3n3d),
-              'valid'    : (v4l1d)
+              'valid'    : (v4l1d),
+              'ticked'   : (t1ck3d),
+              'last'     : (l4st)
+
           };
           hydr0g3n.controls = {
               'exit'     : ex1t
