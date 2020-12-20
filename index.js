@@ -5,18 +5,23 @@ const bigBang = function(){
      * @var object
      *
      */
-    let hydrogen = {};
+    let hydr0g3n = {};
     /*
      * @private
      * @var boolean 
      *
      */
-    let valid  = true;
+    let v4l1d  = true;
     /*
      * @private
      * @var boolean
      */
-    let happened = false;
+    let h4pp3n3d = false;
+    /*
+     * @private
+     * @var {integer} [Uint64]
+     */
+    let t1ck3d = 0;
     /*
      * @private
      * @var {timeout}
@@ -26,7 +31,7 @@ const bigBang = function(){
      * @private
      *
      */
-    let exit = function(){
+    let ex1t = function(){
         clearTimeout(interval);
     }
     /*
@@ -35,43 +40,43 @@ const bigBang = function(){
     let boo000om = function(){
           if(typeof window === 'object')
               if(
-                  (typeof window.theUniverse === 'undefined')||
-                  (window.theUniverse !== hydrogen)
+                  (typeof window.theUn1v3rse === 'undefined')||
+                  (window.theUn1v3rse !== hydr0g3n)
               ){
-                  if(happened === true){
+                  if(h4pp3n3d === true){
                         console.error(
                             'Somthing wrong with the universe'
                         );
-                        valid = false;
+                        v4l1d = false;
                   }
-                  window.theUniverse = hydrogen;
+                  window.theUn1v3rse = hydr0g3n;
               }
           if(typeof global === 'object')
               if(
-                  (typeof global.theUniverse === 'undefined')||
-                  (global.theUniverse !== hydrogen)
+                  (typeof global.theUn1v3rse === 'undefined')||
+                  (global.theUn1v3rse !== hydr0g3n)
               ){
-                  if(happened === true){
+                  if(h4pp3n3d === true){
                         console.error(
                             'Somthing wrong with the universe'
                         );
-                        valid = false;
+                        v4l1d = false;
                         console.error(
-                            global.theUniverse
+                            global.theUn1v3rse
                         );
                         console.error(
-                            hydrogen
+                            hydr0g3n
                         );
                   }
-                  global.theUniverse = hydrogen;
+                  global.theUn1v3rse = hydr0g3n;
               }
-          happened = true;
-          hydrogen.stat = {
-              'happened' : (happened),
-              'valid'    : (valid)
+          h4pp3n3d = true;
+          hydr0g3n.stat = {
+              'happened' : (h4pp3n3d),
+              'valid'    : (v4l1d)
           };
-          hydrogen.controls = {
-              'exit'     : exit
+          hydr0g3n.controls = {
+              'exit'     : ex1t
           }
           interval = setTimeout(boo000om, 10000);
     }
@@ -83,7 +88,6 @@ const bigBang = function(){
 
 
 new bigBang();
-
 
 
 
