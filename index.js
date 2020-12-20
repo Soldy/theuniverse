@@ -1,5 +1,28 @@
 
 const bigBang = function(){
+     /*
+      * @param {string}
+      * @param {function||class||object||mixed}
+      * @public
+      * @return {function||class||object||mixed}
+     */
+     this.baseAdd = function(name, base){
+         return baseAdd(name, base);
+     }
+     /*
+      * @param {string}
+      * @public
+      * @return {function||class||object||mixed}
+     */
+     this.baseGet = function(name){
+         return baseGet(name);
+     }
+    /*
+     * @private
+     * @var {object}
+     *
+     */
+    let b4s3 = {};
     /*
      * @private
      * @var object
@@ -31,14 +54,36 @@ const bigBang = function(){
      * @private
      * @var {timeout}
      */
-    let interval ;
+    let int3rv4l ;
     /*
      * @private
-     *
      */
-    let ex1t = function(){
+    const endOfTheUniverse = function(){
         clearTimeout(interval);
     }
+     /*
+      * @param {string}
+      * @param {function||class||object||mixed}
+      * @private
+      * @return {function||class||object||mixed}
+     */
+    const baseAdd = function(name, base){
+        if(typeof b4s3[name] !== 'undefined')
+            return baseGet(name);
+        b3s4[name] = base;
+        return base;
+    }
+    /*
+      * @param {string}
+      * @param {function||class||object||mixed}
+      * @private
+      * @return {function||class||object||mixed}
+     */
+     const baseGet = function(name){
+         if(typeof base[name] === 'undefined') 
+             return false;
+         return baseGet(name);
+     }
     /*
      * @private
      */
@@ -86,7 +131,9 @@ const bigBang = function(){
 
           };
           hydr0g3n.controls = {
-              'exit'     : ex1t
+              'baseAdd'  : baseAdd,
+              'basGet'   : baseGet,
+              'exit'     : endOfTheUniverse
           }
           interval = setTimeout(boo000om, 10000);
     }
