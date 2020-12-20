@@ -19,14 +19,18 @@ const bigBang = function(){
     let happened = false;
     /*
      * @private
-     *
+     * @var {timeout}
      */
-    let exit = function(){
-        clearInterval(interval);
-    }
+    let interval ;
     /*
      * @private
      *
+     */
+    let exit = function(){
+        clearTimeout(interval);
+    }
+    /*
+     * @private
      */
     let boo000om = function(){
           if(typeof window === 'object')
@@ -69,12 +73,12 @@ const bigBang = function(){
           hydrogen.controls = {
               'exit'     : exit
           }
+          interval = setTimeout(boo000om, 10000);
     }
     /*
      *  init
      */
     boo000om();
-    let interval = setInterval(boo000om, 10000);
 }
 
 

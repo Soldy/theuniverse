@@ -2,7 +2,7 @@
 
 Simple identity holder.
 
-##init 
+## init 
 
 
 ```javascript
