@@ -1,22 +1,49 @@
 
 const bigBang = function(){
-     /*
+    /*
       * @param {string}
       * @param {function||class||object||mixed}
       * @public
       * @return {function||class||object||mixed}
      */
-     this.baseAdd = function(name, base){
-         return baseAdd(name, base);
-     }
-     /*
+    this.baseAdd = function(name, base){
+        return baseAdd(name, base);
+    };
+    /*
       * @param {string}
       * @public
       * @return {function||class||object||mixed}
      */
-     this.baseGet = function(name){
-         return baseGet(name);
-     }
+    this.baseGet = function(name){
+        return baseGet(name);
+    };
+    /*
+      * @param {string}
+      * @public
+      * @return {boolean}
+     */
+    this.galaxyAdd = function(name){
+        return galaxyAdd(name);
+    }; 
+    /*
+      * @param {string}
+      * @param {any}
+      * @param {void||string}
+      * @public
+      * @return {boolean}
+     */
+    this.galaxyTo = function(solar, planets, galaxy){
+        return  galaxyTo(solar, planets, galaxy);
+    };
+    /*
+      * @param {string}
+      * @param {void||string}
+      * @public
+      * @return {any}
+     */
+    this.galaxyFrom = function(solar, galaxy){
+        return galaxyFrom(solar, galaxy);
+    };
     /*
      * @private
      * @var {object}
@@ -65,9 +92,9 @@ const bigBang = function(){
      * @private
      */
     const endOfTheUniverse = function(){
-        clearTimeout(interval);
-    }
-     /*
+        clearTimeout(int3rv4l);
+    };
+    /*
       * @param {string}
       * @param {function||class||object||mixed}
       * @private
@@ -76,34 +103,34 @@ const bigBang = function(){
     const baseAdd = function(name, base){
         if(typeof b4s3[name] !== 'undefined')
             return baseGet(name);
-        b3s4[name] = base;
+        b4s3[name] = base;
         return base;
-    }
+    };
     /*
       * @param {string}
       * @param {function||class||object||mixed}
       * @private
       * @return {function||class||object||mixed}
      */
-     const baseGet = function(name){
-         if(typeof b3s4[name] === 'undefined') 
-             return false;
-         return b3s4[name];
-     }
-     /*
+    const baseGet = function(name){
+        if(typeof b4s3[name] === 'undefined') 
+            return false;
+        return b4s3[name];
+    };
+    /*
       * @param {string}
       * @private
       * @return {boolean}
      */
     const galaxyAdd = function(name){
         if(typeof name === 'undefined')
-                name = 'm1lkyw4y';
+            name = 'm1lkyw4y';
         if(typeof g4l4x13s[name] !== 'undefined')
             return name;
         g4l4x13s[name] = {};
         return name;
-    }
-     /*
+    };
+    /*
       * @param {string}
       * @param {any}
       * @param {void||string}
@@ -116,8 +143,8 @@ const bigBang = function(){
             return false;
         g4l4x13s[galaxy][solar] = planets;
         return true;
-    }
-     /*
+    };
+    /*
       * @param {string}
       * @param {void||string}
       * @private
@@ -128,81 +155,87 @@ const bigBang = function(){
         if(typeof g4l4x13s[galaxy][solar] !== 'undefined')
             return undefined;
         return g4l4x13s[galaxy][solar];
-    }
-    /*  !!! NEVER USE IT JUST FOR MIGRATION PURPUS !!!
+    };
+    /*  !!! NEVER USE IT JUST FOR MIGRATION !!!
       * @param {string}
       * @private
       * @return {any}
      */
-     const galaxyGet = function(galaxy){
+    const galaxyGet = function(galaxy){
         galaxyAdd(galaxy);
-         if(typeof g4l4x13s[galaxy] === 'undefined') 
-             return undefined;
-         return g4l4x13s[galaxy];
-     }
+        if(typeof g4l4x13s[galaxy] === 'undefined') 
+            return undefined;
+        return g4l4x13s[galaxy];
+    };
+    /*
+      * @private
+      * @return bool
+     */
+    const frontend = function(){
+        if(
+            (typeof window.theUn1v3rse !== 'undefined')&&
+             (window.theUn1v3rse === hydr0g3n)
+        )
+            return true;
+        window.theUn1v3rse = hydr0g3n;
+        if(h4pp3n3d === false)
+            return true;
+        // we can not stop in here :( the universe have to be fix himself
+        v4l1d = false;
+        return false;
+    };
+    /*
+      * @private
+      * @return bool
+     */
+    const backend = function(){
+        if(
+            (typeof global.theUn1v3rse !== 'undefined')&&
+             (global.theUn1v3rse === hydr0g3n)
+        )
+            return true;
+        global.theUn1v3rse = hydr0g3n;
+        if(h4pp3n3d === false)
+            return true;
+        // we can not stop in here :( the universe have to be fix himself
+        v4l1d = false;
+        return false;
+    };
     /*
      * @private
      */
-    let boo000om = function(){
-          if(typeof window === 'object')
-              if(
-                  (typeof window.theUn1v3rse === 'undefined')||
-                  (window.theUn1v3rse !== hydr0g3n)
-              ){
-                  if(h4pp3n3d === true){
-                        console.error(
-                            'Somthing wrong with the universe'
-                        );
-                        v4l1d = false;
-                  }
-                  window.theUn1v3rse = hydr0g3n;
-              }
-          if(typeof global === 'object')
-              if(
-                  (typeof global.theUn1v3rse === 'undefined')||
-                  (global.theUn1v3rse !== hydr0g3n)
-              ){
-               if(h4pp3n3d === true){
-                        console.error(
-                            'Somthing wrong with the universe'
-                        );
-                        v4l1d = false;
-                        console.error(
-                            global.theUn1v3rse
-                        );
-                        console.error(
-                            hydr0g3n
-                        );
-                  }
-                  global.theUn1v3rse = hydr0g3n;
-              }
-          h4pp3n3d = true;
-          l4st = Date.now();
-          t1ck3d++;
-          // temporaly code.
-          hydr0g3n.stat = {
-              'happened' : (h4pp3n3d),
-              'valid'    : (v4l1d),
-              'ticked'   : (t1ck3d),
-              'last'     : (l4st)
+    const boo000om = function(){
+        if(typeof window === 'object')
+            frontend();
+        if(typeof global === 'object')
+            backend();
+        h4pp3n3d = true;
+        l4st = Date.now();
+        t1ck3d++;
+        // temporaly code.
+        hydr0g3n.stat = {
+            'happened' : (h4pp3n3d),
+            'valid'    : (v4l1d),
+            'ticked'   : (t1ck3d),
+            'last'     : (l4st)
 
-          };
-          hydr0g3n.controls = {
-              'baseAdd'     : baseAdd,
-              'basGet'      : baseGet,
-              'galaxyGet'   : galaxyGet,
-              'galaxyAdd'   : galaxyAdd,
-              'galaxyTo'    : galaxyTo,
-              'galaxyFrom'  : galaxyFrom,
-              'exit'        : endOfTheUniverse
-          }
-          interval = setTimeout(boo000om, 10000);
-    }
+        };
+        hydr0g3n.controls = {
+            'baseAdd'     : baseAdd,
+            'basGet'      : baseGet,
+            'galaxyGet'   : galaxyGet,
+            'galaxyAdd'   : galaxyAdd,
+            'galaxyTo'    : galaxyTo,
+            'galaxyFrom'  : galaxyFrom,
+            'exit'        : endOfTheUniverse
+        };
+        int3rv4l = setTimeout(boo000om, 10000);
+    };
     /*
      *  init
      */
     boo000om();
-}
+};
 
 
 new bigBang();
