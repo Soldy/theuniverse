@@ -1,4 +1,12 @@
+/*
+ *  @Soldy\theuniverse\2021.01.23\GPL3
+ */
+'use strict';
 
+/*
+ * @param {integer} limitIn //maximum size of package
+ * @prototype
+ */
 const bigBang = function(){
     /*
       * @param {string}
