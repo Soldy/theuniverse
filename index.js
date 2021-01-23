@@ -168,47 +168,15 @@ const bigBang = function(){
         return g4l4x13s[galaxy];
     };
     /*
-      * @private
-      * @return bool
-     */
-    const frontend = function(){
-        if(
-            (typeof window.theUn1v3rse !== 'undefined')&&
-             (window.theUn1v3rse === hydr0g3n)
-        )
-            return true;
-        window.theUn1v3rse = hydr0g3n;
-        if(h4pp3n3d === false)
-            return true;
-        // we can not stop in here :( the universe have to be fix himself
-        v4l1d = false;
-        return false;
-    };
-    /*
-      * @private
-      * @return bool
-     */
-    const backend = function(){
-        if(
-            (typeof global.theUn1v3rse !== 'undefined')&&
-             (global.theUn1v3rse === hydr0g3n)
-        )
-            return true;
-        global.theUn1v3rse = hydr0g3n;
-        if(h4pp3n3d === false)
-            return true;
-        // we can not stop in here :( the universe have to be fix himself
-        v4l1d = false;
-        return false;
-    };
-    /*
      * @private
      */
     const boo000om = function(){
-        if(typeof window === 'object')
-            frontend();
-        if(typeof global === 'object')
-            backend();
+        if(ev3ryth1ng.theUn1v3rse !== hydr0g3n){
+             ev3ryth1ng.theUn1v3rse = hydr0g3n;
+             if(h4pp3n3d === true)
+                 v4l1d = false;
+        }
+        // we can not stop in here :( the universe have to be fix himself
         h4pp3n3d = true;
         l4st = Date.now();
         t1ck3d++;
@@ -234,6 +202,11 @@ const bigBang = function(){
     /*
      *  init
      */
+    let ev3ryth1ng;
+    if(typeof window !== 'undefined')
+        ev3ryth1ng = window;
+    else
+        ev3ryth1ng = global;
     boo000om();
 };
 
