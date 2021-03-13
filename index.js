@@ -31,7 +31,7 @@ const bigBang = function(){
       * @return {boolean}
      */
     this.galaxyAdd = function(name){
-        return galaxyAdd(name);
+        return _galaxyAdd(name);
     }; 
     /*
       * @param {string}
@@ -40,8 +40,8 @@ const bigBang = function(){
       * @public
       * @return {boolean}
      */
-    this.galaxyTo = function(solar, planets, galaxy){
-        return  galaxyTo(solar, planets, galaxy);
+    this.solarToGalaxy = function(galaxy, solar, planets){
+        return  _toGalaxy(solar, planets, galaxy);
     };
     /*
       * @param {string}
@@ -49,8 +49,8 @@ const bigBang = function(){
       * @public
       * @return {any}
      */
-    this.galaxyFrom = function(solar, galaxy){
-        return galaxyFrom(solar, galaxy);
+    this.fromGalaxy = function(galaxy, solar){
+        return _fromGalaxy(solar, galaxy);
     };
     /*
      * @private
@@ -107,7 +107,7 @@ const bigBang = function(){
      */
     let _int3rv4l ;
     /*
-     * @private
+     * @privat
      */
     const _endOfTheUniverse = function(){
         clearTimeout(_int3rv4l);
@@ -155,8 +155,8 @@ const bigBang = function(){
       * @private
       * @return {boolean}
      */
-    const _galaxyTo = function(solar, planets, galaxy){
-        _galaxyAdd(galaxy);
+    const _solarToGalaxy = function(galaxy, solar, planets){
+        galaxy = _galaxyAdd(galaxy);
         if(typeof _g4l4x13s[galaxy][solar] !== 'undefined')
             return false;
         _g4l4x13s[galaxy][solar] = planets;
@@ -168,13 +168,13 @@ const bigBang = function(){
       * @private
       * @return {any}
      */
-    const _galaxyFrom = function(solar, galaxy){
+    const _solarFromGalaxy = function(galaxy, solar){
         _galaxyAdd(galaxy);
         if(typeof _g4l4x13s[galaxy][solar] !== 'undefined')
             return undefined;
         return _g4l4x13s[galaxy][solar];
     };
-    /*  !!! NEVER USE IT JUST FOR MIGRATION !!!
+    /*  !!! JUST FOR MIGRATION !!!
       * @param {string}
       * @private
       * @return {any}
@@ -209,18 +209,18 @@ const bigBang = function(){
 
         };
         _hydr0g3n.controls = {
-            'baseAdd'     : _baseAdd,
-            'basGet'      : _baseGet,
-            'galaxyGet'   : _galaxyGet,
-            'galaxyAdd'   : _galaxyAdd,
-            'galaxyTo'    : _galaxyTo,
-            'galaxyFrom'  : _galaxyFrom,
-            'exit'        : _endOfTheUniverse
+            'baseAdd'          : _baseAdd,
+            'basGet'           : _baseGet,
+            'galaxyGet'        : _galaxyGet,
+            'galaxyAdd'        : _galaxyAdd,
+            'solarTogalaxy'    : _solarToGalaxy,
+            'solarFromGalaxy'  : _solarFromGalaxy,
+            'exit'             : _endOfTheUniverse
         };
         _int3rv4l = setTimeout(
             _boo000om, 
             (
-                _t1m3-Math.abs(Date.now()-now)
+                _t1m3 - Math.abs( Date.now() - now )
             )
         );
     };
@@ -248,6 +248,5 @@ if(
      )
 )
      new bigBang();
-
 
 
