@@ -236,7 +236,18 @@ const bigBang = function(){
 };
 
 
-new bigBang();
+// doubleverse defense
+
+if(
+     (
+         (typeof global === 'undefined') ||
+         (typeof global.theUn1v3rse === 'undefined')
+     )&&(
+         (typeof window === 'undefined') ||
+         (typeof window.theUn1v3rse === 'undefined')
+     )
+)
+     new bigBang();
 
 
 
