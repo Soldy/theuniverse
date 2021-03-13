@@ -54,53 +54,63 @@ const bigBang = function(){
     };
     /*
      * @private
-     * @var {object}
-     *
+     * @constant {integer}
      */
-    let g4l4x13s = {};
+    const _0 = Date.now();
+    /*
+     * @private
+     * @constant {integer}
+     */
+    const _t1m3 = 1000;
     /*
      * @private
      * @var {object}
      *
      */
-    let b4s3 = {};
+    let _g4l4x13s = {};
+    /*
+     * @private
+     * @var {object}
+     *
+     */
+    let _b4s3 = {};
     /*
      * @private
      * @var object
      *
      */
-    let hydr0g3n = {};
+    let _hydr0g3n = {};
     /*
      * @private
      * @var boolean 
      *
      */
-    let v4l1d  = true;
+    let _v4l1d  = true;
     /*
      * @private
      * @var boolean
      */
-    let h4pp3n3d = false;
+    let _h4pp3n3d = false;
     /*
      * @private
      * @var {integer} [Uint64]
      */
-    let t1ck3d = 0;
+    let _t1ck3d = 0;
     /*
      * @private
      * @var {integer} [Uint32]
      */
-    let l4st = 0;
+    let _l4st = 0;
     /*
      * @private
      * @var {timeout}
      */
-    let int3rv4l ;
+    let _int3rv4l ;
     /*
      * @private
      */
-    const endOfTheUniverse = function(){
-        clearTimeout(int3rv4l);
+    const _endOfTheUniverse = function(){
+        clearTimeout(_int3rv4l);
     };
     /*
       * @param {string}
@@ -108,10 +118,10 @@ const bigBang = function(){
       * @private
       * @return {function||class||object||mixed}
      */
-    const baseAdd = function(name, base){
-        if(typeof b4s3[name] !== 'undefined')
-            return baseGet(name);
-        b4s3[name] = base;
+    const _baseAdd = function(name, base){
+        if(typeof _b4s3[name] !== 'undefined')
+            return _baseGet(name);
+        _b4s3[name] = base;
         return base;
     };
     /*
@@ -120,22 +130,22 @@ const bigBang = function(){
       * @private
       * @return {function||class||object||mixed}
      */
-    const baseGet = function(name){
+    const _baseGet = function(_name){
         if(typeof b4s3[name] === 'undefined') 
             return false;
-        return b4s3[name];
+        return _b4s3[name];
     };
-    /*
-      * @param {string}
-      * @private
-      * @return {boolean}
+    /* Create a galaxy
+     * @param {string}
+     * @private
+     * @return {boolean}
      */
-    const galaxyAdd = function(name){
+    const _galaxyAdd = function(name){
         if(typeof name === 'undefined')
             name = 'm1lkyw4y';
-        if(typeof g4l4x13s[name] !== 'undefined')
+        if(typeof _g4l4x13s[name] !== 'undefined')
             return name;
-        g4l4x13s[name] = {};
+        _g4l4x13s[name] = {};
         return name;
     };
     /*
@@ -145,11 +155,11 @@ const bigBang = function(){
       * @private
       * @return {boolean}
      */
-    const galaxyTo = function(solar, planets, galaxy){
-        galaxyAdd(galaxy);
-        if(typeof g4l4x13s[galaxy][solar] !== 'undefined')
+    const _galaxyTo = function(solar, planets, galaxy){
+        _galaxyAdd(galaxy);
+        if(typeof _g4l4x13s[galaxy][solar] !== 'undefined')
             return false;
-        g4l4x13s[galaxy][solar] = planets;
+        _g4l4x13s[galaxy][solar] = planets;
         return true;
     };
     /*
@@ -158,64 +168,71 @@ const bigBang = function(){
       * @private
       * @return {any}
      */
-    const galaxyFrom = function(solar, galaxy){
-        galaxyAdd(galaxy);
-        if(typeof g4l4x13s[galaxy][solar] !== 'undefined')
+    const _galaxyFrom = function(solar, galaxy){
+        _galaxyAdd(galaxy);
+        if(typeof _g4l4x13s[galaxy][solar] !== 'undefined')
             return undefined;
-        return g4l4x13s[galaxy][solar];
+        return _g4l4x13s[galaxy][solar];
     };
     /*  !!! NEVER USE IT JUST FOR MIGRATION !!!
       * @param {string}
       * @private
       * @return {any}
      */
-    const galaxyGet = function(galaxy){
-        galaxyAdd(galaxy);
-        if(typeof g4l4x13s[galaxy] === 'undefined') 
+    const _galaxyGet = function(galaxy){
+        _galaxyAdd(galaxy);
+        if(typeof _g4l4x13s[galaxy] === 'undefined') 
             return undefined;
-        return g4l4x13s[galaxy];
+        return _g4l4x13s[galaxy];
     };
     /*
      * @private
      */
-    const boo000om = function(){
-        if(ev3ryth1ng.theUn1v3rse !== hydr0g3n){
-             ev3ryth1ng.theUn1v3rse = hydr0g3n;
-             if(h4pp3n3d === true)
-                 v4l1d = false;
+    const _boo000om = function(){
+        let now = Date.now();
+        if(_ev3ryth1ng.theUn1v3rse !== _hydr0g3n){
+             _ev3ryth1ng.theUn1v3rse = _hydr0g3n;
+             if(_h4pp3n3d === true)
+                 _v4l1d = false;
         }
         // we can not stop in here :( the universe have to be fix himself
-        h4pp3n3d = true;
-        l4st = Date.now();
-        t1ck3d++;
+        _h4pp3n3d = true;
+        _l4st = now;
+        _t1ck3d++;
         // temporaly code.
-        hydr0g3n.stat = {
-            'happened' : (h4pp3n3d),
-            'valid'    : (v4l1d),
-            'ticked'   : (t1ck3d),
-            'last'     : (l4st)
+        _hydr0g3n.stat = {
+            'ad'       : (_0),
+            'happened' : (_h4pp3n3d),
+            'valid'    : (_v4l1d),
+            'ticked'   : (_t1ck3d),
+            'last'     : (_l4st)
 
         };
-        hydr0g3n.controls = {
-            'baseAdd'     : baseAdd,
-            'basGet'      : baseGet,
-            'galaxyGet'   : galaxyGet,
-            'galaxyAdd'   : galaxyAdd,
-            'galaxyTo'    : galaxyTo,
-            'galaxyFrom'  : galaxyFrom,
-            'exit'        : endOfTheUniverse
+        _hydr0g3n.controls = {
+            'baseAdd'     : _baseAdd,
+            'basGet'      : _baseGet,
+            'galaxyGet'   : _galaxyGet,
+            'galaxyAdd'   : _galaxyAdd,
+            'galaxyTo'    : _galaxyTo,
+            'galaxyFrom'  : _galaxyFrom,
+            'exit'        : _endOfTheUniverse
         };
-        int3rv4l = setTimeout(boo000om, 10000);
+        _int3rv4l = setTimeout(
+            _boo000om, 
+            (
+                _t1m3-Math.abs(Date.now()-now)
+            )
+        );
     };
     /*
      *  init
      */
-    let ev3ryth1ng;
+    let _ev3ryth1ng;
     if(typeof window !== 'undefined')
-        ev3ryth1ng = window;
+        _ev3ryth1ng = window;
     else
-        ev3ryth1ng = global;
-    boo000om();
+        _ev3ryth1ng = global;
+    _boo000om();
 };
 
 
