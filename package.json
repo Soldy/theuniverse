@@ -1,0 +1,19 @@
+{
+  "name": "theuniverse",
+  "version": "0.1.2",
+  "description": "All identity hold by the universe. :)",
+  "main": "index.js",
+  "scripts": {
+    "test": "node test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Soldy/theuniverse.git"
+  },
+  "author": "Soldy <npmjs@gidigi.com> (http://gidigi.com)",
+  "license": "GPL-3.0-or-later",
+  "bugs": {
+    "url": "https://github.com/Soldy/theuniverse/issues"
+  },
+  "homepage": "https://github.com/Soldy/theuniverse#readme"
+}
