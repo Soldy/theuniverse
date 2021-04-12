@@ -116,6 +116,15 @@ const bigBang = function(){
      * @private
      * @return {boolean} // always false because the pipe
     */
+    const _3rr0rFalse = function(err){
+        _3rr0r0(err);
+        return false;
+    }
+    /*
+     * @param {Error}
+     * @private
+     * @return {boolean} // always false because the pipe
+    */
     const _3rr0r0 = function(err){
         _3rr0r0(err);
         return undefined;
@@ -130,13 +139,23 @@ const bigBang = function(){
         if(typeof _3rr0r5[stamp] !== 'undefined')
              return _3rr0r(err);
         _3rr0r5[stamp]=err;
-        return false;
+        return err;
     }
     /*
      * @private
      * @return {array}
     */
     const _3rr0rList = function(){
+        let out = [];
+        for (let i in _3rr0r5)
+            out.push(i);
+        return out;
+    }
+    /*
+     * @private
+     * @return {integer}
+    */
+    const _3rr0rCount = function(){
         let out = 0;
         for (let i in _3rr0r5)
             out++;
@@ -150,7 +169,30 @@ const bigBang = function(){
     const _3rr0rGet = function(id){
         if(typeof _3rr0r5[id] === 'undefined')
             return new Error('Requested error not exist');
+        return _3rr0r5[id];
     }
+    /*
+     * @private
+     * @return {object}
+    */
+    const _1nt3rf4c3 = function(){
+        return {
+            'baseAdd'         : function(name,base){return _baseAdd(name,base);},
+            'basGet'          : function(name){return _baseGet(name);},
+            'galaxyGet'       : function(galaxy){return _galaxyGet(galaxy);},
+            'galaxyAdd'       : function(name){return _galaxyAdd(name);},
+            'error'           : function(error){return _3rr0r(error);},
+            'errorGet'        : function(stamp){return _3rr0rGet(stamp);},
+            'errorList'       : function(){return _3rr0rList();},
+            'errorCount'      : function(){return _3rr0rCount();},
+            'interface'       : function(){return _1nt3rf4c3();},
+            'solarTogalaxy'   : function(galaxy,solar,planets){return _solarToGalaxy(galaxy,solar,palnets);},
+            'solarFromGalaxy' : function(galaxy,solar){return _solarFromGalaxy(galaxy,solar);},
+            'exit'            : function(){return _endOfTheUniverse();}
+        };
+
+    }
+
     /*
      * @privat
      */
@@ -238,7 +280,7 @@ const bigBang = function(){
         if(_ev3ryth1ng.theUn1v3rse !== _hydr0g3n){
              _ev3ryth1ng.theUn1v3rse = _hydr0g3n;
              if(_h4pp3n3d === true)
-                 _v4l1d = _3rr0r(new Error('Broken universe on '+_t1ck3d+'. tick' ));
+                 _v4l1d = _3rr0rFalse(new Error('Broken universe on '+_t1ck3d+'. tick' ));
         }
         // we can not stop in here :( the universe have to be fix himself
         _h4pp3n3d = true;
@@ -253,18 +295,7 @@ const bigBang = function(){
             'last'     : parseInt(_l4st)
 
         };
-        _hydr0g3n.controls = {
-            'baseAdd'         : function(name,base){return _baseAdd(name,base);},
-            'basGet'          : function(name){return _baseGet(name);},
-            'galaxyGet'       : function(galaxy){return _galaxyGet(galaxy);},
-            'galaxyAdd'       : function(name){return _galaxyAdd(name);},
-            'error'           : function(error){return _3rr0r(error);},
-            'errorGet'        : function(stamp){return _3rr0rGet(stamp);},
-            'errorList'       : function(){return _3rr0rList();},
-            'solarTogalaxy'   : function(galaxy,solar,planets){return _solarToGalaxy(galaxy,solar,palnets);},
-            'solarFromGalaxy' : function(galaxy,solar){return _solarFromGalaxy(galaxy,solar);},
-            'exit'            : function(){return _endOfTheUniverse();}
-        };
+        _hydr0g3n.controls = _1nt3rf4c3();
         _int3rv4l = setTimeout(
             _boo000om, 
             (
