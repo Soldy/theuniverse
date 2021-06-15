@@ -8,6 +8,16 @@
  * @prototype
  */
 const bigBang = function(){
+    /**
+     * @param {string}
+     * @param {string}
+     * @param {string}
+     * @public
+     * return {object}
+     */
+    this.req = function (n4m3, includ3, part){
+        return _0r3(n4m3, includ3, part);
+    };
     /*
       * @param {string}
       * @param {function||class||object||mixed}
@@ -15,7 +25,7 @@ const bigBang = function(){
       * @return {function||class||object||mixed}
      */
     this.baseAdd = function(name, base){
-        return baseAdd(name, base);
+        return _baseAdd(name, base);
     };
     /*
       * @param {string}
@@ -23,7 +33,7 @@ const bigBang = function(){
       * @return {function||class||object||mixed}
      */
     this.baseGet = function(name){
-        return baseGet(name);
+        return _baseGet(name);
     };
     /*
       * @param {string}
@@ -41,7 +51,7 @@ const bigBang = function(){
       * @return {boolean}
      */
     this.solarToGalaxy = function(galaxy, solar, planets){
-        return  _toGalaxy(solar, planets, galaxy);
+        return  _solarToGalaxy(solar, planets, galaxy);
     };
     /*
       * @param {string}
@@ -50,8 +60,13 @@ const bigBang = function(){
       * @return {any}
      */
     this.fromGalaxy = function(galaxy, solar){
-        return _fromGalaxy(solar, galaxy);
+        return _solarFromGalaxy(solar, galaxy);
     };
+    /*
+     * @private
+     * @constant {integer}
+     */
+    let _0b5 = {};
     /*
      * @private
      * @constant {integer}
@@ -112,6 +127,18 @@ const bigBang = function(){
      */
     let _3rr0r5 = {};
     /*
+     * @param {string}
+     * @param {string}
+     * @param {string}
+     * @private
+     * @return {object}
+     */
+    const _0r3 = function(n4m3, includ3, part){
+        if(typeof _0b5[n4m3] === 'undefined')
+            _0b5[n4m3] = new ((require(includ3))[part])();
+        return _0b5[n4m3];
+    };
+    /*
      * @param {Error}
      * @private
      * @return {boolean} // always false because the pipe
@@ -119,7 +146,7 @@ const bigBang = function(){
     const _3rr0rFalse = function(err){
         _3rr0r0(err);
         return false;
-    }
+    };
     /*
      * @param {Error}
      * @private
@@ -128,7 +155,7 @@ const bigBang = function(){
     const _3rr0r0 = function(err){
         _3rr0r0(err);
         return undefined;
-    }
+    };
     /*
      * @param {Error}
      * @private
@@ -137,10 +164,10 @@ const bigBang = function(){
     const _3rr0r = function(err){
         let stamp = parseInt(Date.now()).toString();
         if(typeof _3rr0r5[stamp] !== 'undefined')
-             return _3rr0r(err);
+            return _3rr0r(err);
         _3rr0r5[stamp]=err;
         return err;
-    }
+    };
     /*
      * @private
      * @return {array}
@@ -150,7 +177,7 @@ const bigBang = function(){
         for (let i in _3rr0r5)
             out.push(i);
         return out;
-    }
+    };
     /*
      * @private
      * @return {integer}
@@ -160,7 +187,7 @@ const bigBang = function(){
         for (let i in _3rr0r5)
             out++;
         return out;
-    }
+    };
     /*
      * @param {string}
      * @private
@@ -170,7 +197,7 @@ const bigBang = function(){
         if(typeof _3rr0r5[id] === 'undefined')
             return new Error('Requested error not exist');
         return _3rr0r5[id];
-    }
+    };
     /*
      * @private
      * @return {object}
@@ -186,12 +213,12 @@ const bigBang = function(){
             'errorList'       : function(){return _3rr0rList();},
             'errorCount'      : function(){return _3rr0rCount();},
             'interface'       : function(){return _1nt3rf4c3();},
-            'solarTogalaxy'   : function(galaxy,solar,planets){return _solarToGalaxy(galaxy,solar,palnets);},
+            'solarTogalaxy'   : function(galaxy,solar,planets){return _solarToGalaxy(galaxy,solar,planets);},
             'solarFromGalaxy' : function(galaxy,solar){return _solarFromGalaxy(galaxy,solar);},
             'exit'            : function(){return _endOfTheUniverse();}
         };
 
-    }
+    };
 
     /*
      * @privat
@@ -217,8 +244,8 @@ const bigBang = function(){
       * @private
       * @return {function||class||object||mixed}
      */
-    const _baseGet = function(_name){
-        if(typeof b4s3[name] === 'undefined') 
+    const _baseGet = function(name){
+        if(typeof _b4s3[name] === 'undefined') 
             return _3rr0r0(new RangeError('base not exist'));
         return _b4s3[name];
     };
@@ -278,9 +305,9 @@ const bigBang = function(){
     const _boo000om = function(){
         let now = Date.now();
         if(_ev3ryth1ng.theUn1v3rse !== _hydr0g3n){
-             _ev3ryth1ng.theUn1v3rse = _hydr0g3n;
-             if(_h4pp3n3d === true)
-                 _v4l1d = _3rr0rFalse(new Error('Broken universe on '+_t1ck3d+'. tick' ));
+            _ev3ryth1ng.theUn1v3rse = _hydr0g3n;
+            if(_h4pp3n3d === true)
+                _v4l1d = _3rr0rFalse(new Error('Broken universe on '+_t1ck3d+'. tick' ));
         }
         // we can not stop in here :( the universe have to be fix himself
         _h4pp3n3d = true;
