@@ -204,6 +204,7 @@ const bigBang = function(){
     */
     const _1nt3rf4c3 = function(){
         return {
+            'req'             : function(n,i,p){return _0r3(n,i,p);},
             'baseAdd'         : function(name,base){return _baseAdd(name,base);},
             'basGet'          : function(name){return _baseGet(name);},
             'galaxyGet'       : function(galaxy){return _galaxyGet(galaxy);},
