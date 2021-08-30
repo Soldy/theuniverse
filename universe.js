@@ -51,7 +51,7 @@ const bigBang = function(){
       * @return {boolean}
      */
     this.solarToGalaxy = function(galaxy, solar, planets){
-        return  _solarToGalaxy(solar, planets, galaxy);
+        return  _solarToGalaxy(galaxy, solar, planets);
     };
     /*
       * @param {string}
@@ -206,7 +206,8 @@ const bigBang = function(){
         return {
             'req'             : function(n,i,p){return _0r3(n,i,p);},
             'baseAdd'         : function(name,base){return _baseAdd(name,base);},
-            'basGet'          : function(name){return _baseGet(name);},
+            'baseCheck'          : function(name){return _baseCheck(name);},
+            'baseGet'          : function(name){return _baseGet(name);},
             'galaxyGet'       : function(galaxy){return _galaxyGet(galaxy);},
             'galaxyAdd'       : function(name){return _galaxyAdd(name);},
             'error'           : function(error){return _3rr0r(error);},
@@ -241,7 +242,16 @@ const bigBang = function(){
     };
     /*
       * @param {string}
-      * @param {function||class||object||mixed}
+      * @private
+      * @return boolean
+     */
+    const _baseCheck = function(name){
+        if(typeof _b4s3[name] === 'undefined') 
+            return false;
+        return true;
+    };
+    /*
+      * @param {string}
       * @private
       * @return {function||class||object||mixed}
      */
