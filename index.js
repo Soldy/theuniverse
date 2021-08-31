@@ -6,5 +6,8 @@ if(
         (typeof window === 'undefined') ||
          (typeof window.theUn1v3rse === 'undefined')
     )
-)
-    new (require('./universe.js')).base();
+){
+   const universeBase = (require('./universe.js')).base;
+   new universeBase(universeBase.prototype)
+
+}

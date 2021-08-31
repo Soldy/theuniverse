@@ -7,7 +7,7 @@
  * @param {integer} limitIn //maximum size of package
  * @prototype
  */
-const bigBang = function(){
+const bigBang = function(prototype){
     /**
      * @param {string}
      * @param {string}
@@ -15,7 +15,7 @@ const bigBang = function(){
      * @public
      * return {object}
      */
-    this.req = function (n4m3, includ3, part){
+    prototype.req = function (n4m3, includ3, part){
         return _0r3(n4m3, includ3, part);
     };
     /*
@@ -24,7 +24,7 @@ const bigBang = function(){
       * @public
       * @return {function||class||object||mixed}
      */
-    this.baseAdd = function(name, base){
+    prototype.baseAdd = function(name, base){
         return _baseAdd(name, base);
     };
     /*
@@ -32,7 +32,7 @@ const bigBang = function(){
       * @public
       * @return {function||class||object||mixed}
      */
-    this.baseGet = function(name){
+    prototype.baseGet = function(name){
         return _baseGet(name);
     };
     /*
@@ -40,7 +40,7 @@ const bigBang = function(){
       * @public
       * @return {boolean}
      */
-    this.galaxyAdd = function(name){
+    prototype.galaxyAdd = function(name){
         return _galaxyAdd(name);
     }; 
     /*
@@ -50,7 +50,7 @@ const bigBang = function(){
       * @public
       * @return {boolean}
      */
-    this.solarToGalaxy = function(galaxy, solar, planets){
+    prototype.solarToGalaxy = function(galaxy, solar, planets){
         return  _solarToGalaxy(galaxy, solar, planets);
     };
     /*
@@ -59,7 +59,7 @@ const bigBang = function(){
       * @public
       * @return {any}
      */
-    this.fromGalaxy = function(galaxy, solar){
+    prototype.fromGalaxy = function(galaxy, solar){
         return _solarFromGalaxy(solar, galaxy);
     };
     /*
