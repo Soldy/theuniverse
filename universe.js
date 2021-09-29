@@ -206,8 +206,8 @@ const bigBang = function(prototype){
         return {
             'req'             : function(n,i,p){return _0r3(n,i,p);},
             'baseAdd'         : function(name,base){return _baseAdd(name,base);},
-            'baseCheck'          : function(name){return _baseCheck(name);},
-            'baseGet'          : function(name){return _baseGet(name);},
+            'baseCheck'       : function(name){return _baseCheck(name);},
+            'baseGet'         : function(name){return _baseGet(name);},
             'galaxyGet'       : function(galaxy){return _galaxyGet(galaxy);},
             'galaxyAdd'       : function(name){return _galaxyAdd(name);},
             'error'           : function(error){return _3rr0r(error);},
