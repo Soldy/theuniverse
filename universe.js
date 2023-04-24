@@ -153,7 +153,7 @@ const bigBang = function(prototype){
      * @return {boolean} // always false because the pipe
     */
     const _3rr0r0 = function(err){
-        _3rr0r0(err);
+        _3rr0r(err);
         return undefined;
     };
     /*
