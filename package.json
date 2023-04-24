@@ -1,6 +1,6 @@
 {
   "name": "theuniverse",
-  "version": "0.2.2",
+  "version": "0.2.3",
   "description": "All identity hold by the universe. :)",
   "main": "index.js",
   "scripts": {
@@ -17,6 +17,6 @@
   },
   "homepage": "https://github.com/Soldy/theuniverse#readme",
   "devDependencies": {
-    "nanoTest": "0.9.9-beta26"
+    "nanoTest": "0.9.9-beta32"
   }
 }
