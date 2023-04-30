@@ -26,7 +26,7 @@ setTimeout(function(){
 
 setTimeout(function(){
     console.log(
-        global.theUn1v3rse.controls.errorGet(
+        global.theUn1v3rse.controls.errorsGet(
             global.theUn1v3rse.controls.errorList()
         )
     );
