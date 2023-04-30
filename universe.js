@@ -123,7 +123,7 @@ const bigBang = function(prototype){
     let _int3rv4l ;
     /*
      * @private
-     * @var {timeout}
+     * @var {map<string, Error>}
      */
     let _3rr0r5 = {};
     /*
@@ -150,7 +150,7 @@ const bigBang = function(prototype){
     /*
      * @param {Error}
      * @private
-     * @return {boolean} // always false because the pipe
+     * @return {undefined}
     */
     const _3rr0r0 = function(err){
         _3rr0r(err);
@@ -159,7 +159,7 @@ const bigBang = function(prototype){
     /*
      * @param {Error}
      * @private
-     * @return {boolean} // always false because the pipe
+     * @return {Error}
     */
     const _3rr0r = function(err){
         let stamp = parseInt(Date.now()).toString();
@@ -189,6 +189,19 @@ const bigBang = function(prototype){
         return out;
     };
     /*
+     * @param {Array<string>}
+     * @private
+     * @return {Array<Error>}
+    */
+    const _3rr0r5Get = function(ids){
+        let out = {};
+        if(!Array.isArray(ids))
+            ids = [ids];
+        for(let i of ids)
+          out[i] = _3rr0rGet(i);
+        return out;
+    };
+    /*
      * @param {string}
      * @private
      * @return {Error}
@@ -212,6 +225,7 @@ const bigBang = function(prototype){
             'galaxyAdd'       : function(name){return _galaxyAdd(name);},
             'error'           : function(error){return _3rr0r(error);},
             'errorGet'        : function(stamp){return _3rr0rGet(stamp);},
+            'errorsGet'       : function(stamps){return _3rr0r5Get(stamps);},
             'errorList'       : function(){return _3rr0rList();},
             'errorCount'      : function(){return _3rr0rCount();},
             'interface'       : function(){return _1nt3rf4c3();},
@@ -306,8 +320,6 @@ const bigBang = function(prototype){
      */
     const _galaxyGet = function(galaxy){
         _galaxyAdd(galaxy);
-        if(typeof _g4l4x13s[galaxy] === 'undefined') 
-            return _3rr0r0(new Error('galaxy is impossible'));
         return _g4l4x13s[galaxy];
     };
     /*
@@ -315,7 +327,10 @@ const bigBang = function(prototype){
      */
     const _boo000om = function(){
         let now = Date.now();
-        if(_ev3ryth1ng.theUn1v3rse !== _hydr0g3n){
+        if(
+          (typeof _ev3ryth1ng.theUn1v3rse === 'undefined')||
+          (_ev3ryth1ng.theUn1v3rse.happened !== true)
+        ){
             _ev3ryth1ng.theUn1v3rse = _hydr0g3n;
             if(_h4pp3n3d === true)
                 _v4l1d = _3rr0rFalse(new Error('Broken universe on '+_t1ck3d+'. tick' ));
@@ -341,7 +356,8 @@ const bigBang = function(prototype){
             )
         );
     };
-    /*
+    /* 
+     * frntend backend compatible magic.
      *  init
      */
     let _ev3ryth1ng;
@@ -352,6 +368,4 @@ const bigBang = function(prototype){
     _boo000om();
 };
 
-
-exports.base = bigBang;
-
+new bigBang(bigBang.prototype)
