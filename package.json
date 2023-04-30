@@ -1,6 +1,6 @@
 {
   "name": "theuniverse",
-  "version": "0.2.3",
+  "version": "0.2.4",
   "description": "All identity hold by the universe. :)",
   "main": "index.js",
   "scripts": {
